@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using WebDeveloper.DataAccess;
 using WebDeveloper.Models;
+using WebDeveloper.Utils;
 
 namespace WebDeveloper.Areas.Person.Controllers
 {
@@ -24,7 +25,7 @@ namespace WebDeveloper.Areas.Person.Controllers
         }
 
         public PartialViewResult EmailList(int? id)
-        {
+        {            
             if(!id.HasValue) return null;
             return PartialView("_EmailList",_personRepository.EmailList(id.Value));
         }
