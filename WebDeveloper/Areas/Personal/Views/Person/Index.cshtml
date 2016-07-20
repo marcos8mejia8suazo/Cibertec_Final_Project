@@ -7,7 +7,8 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @*@Html.ActionLink("Create New", "Create", new { area="Personal" }, new {@onclick= })*@
+    <a href="#" onclick="getModal('Personal/Create');return false;">Create New</a>   
 </p>
 <table class="table">
     <tr>
@@ -61,6 +62,4 @@
 }
 </table>
 @CustomHelpers.GetModal()
-<div id="emailList">
-</div>
 @Scripts.Render("~/Scripts/jquery.unobtrusive-ajax.min.js")
