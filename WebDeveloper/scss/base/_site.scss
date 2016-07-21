@@ -25,3 +25,11 @@ section{
 .body-content{
     display: block;
 }
+
+.modal-content {    
+    background-color: $site-color-white;
+    width:inherit;
+    height:inherit;
+    margin: 0 auto;
+    margin-top: 5rem;
+} 

@@ -7,9 +7,13 @@
 
 <h2>Index</h2>
 
+
 <p>
-    @Html.ActionLink("Create New", "Create", "Personal")
+    <a href="#" class="btn btn-success btn-sm" onclick="getModal('Personal/Create')">
+        <span class="glyphicon glyphicon-plus"></span> Create New
+    </a>
 </p>
+
 <table class="table">
     <tr>
         <th>
@@ -42,25 +46,25 @@
             @Html.DisplayFor(modelItem => item.ModifiedDate)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new {id = item.BusinessEntityID}) |
-            @Html.ActionLink("Details", "Details", new {id = item.BusinessEntityID}) |
-            @Html.ActionLink("Delete", "Delete", new {id = item.BusinessEntityID}) |
-            @Ajax.ActionLink(
-                "View Emails",
-                "EmailList",
-                new {id=item.BusinessEntityID },
-                new AjaxOptions
-                {
-                    InsertionMode = InsertionMode.Replace,
-                    UpdateTargetId = "emailList",
-                    HttpMethod = "GET"
-                }
-            )
+            @*@Html.ActionLink("Edit", "Edit", new {id = item.BusinessEntityID}) |*@
+            <a href="#" class="btn btn-success btn-sm">
+                <span class="glyphicon glyphicon-edit"></span> Edit
+            </a>
+            <a href="#" class="btn btn-success btn-sm">
+                <span class="glyphicon glyphicon-list"></span> Details
+            </a>
+            <a href="#" class="btn btn-success btn-sm" onclick="getModal('Personal/EmailList')">
+                <span class="glyphicon glyphicon-inbox"></span> Emails
+            </a>
+            <a href="#" class="btn btn-danger btn-sm">
+                <span class="glyphicon glyphicon-remove"></span> Remove
+            </a>
+           
         </td>
     </tr>
 }
 </table>
-
+@*@CustomHelpers.getModal()*@
 <div id="emailList">
 </div>
 

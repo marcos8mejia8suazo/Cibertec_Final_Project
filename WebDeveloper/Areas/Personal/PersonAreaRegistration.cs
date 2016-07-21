@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace WebDeveloper.Areas.Person
+namespace WebDeveloper.Areas.Personal
 {
     public class PersonAreaRegistration : AreaRegistration 
     {
@@ -8,7 +8,7 @@ namespace WebDeveloper.Areas.Person
         {
             get 
             {
-                return "Person";
+                return "Personal";
             }
         }
 
